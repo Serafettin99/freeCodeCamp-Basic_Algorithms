@@ -46,7 +46,6 @@ function findLongestWordLength(str) {
   let i;
   let longest = '';
   strToArray = str.split(' ');
-  // console.log(str)
   for (i = 0; i < strToArray.length; i++) {
     if (strToArray[i].length > longest.length) longest = strToArray[i];
   }
@@ -55,3 +54,48 @@ function findLongestWordLength(str) {
 console.log(
   findLongestWordLength('The quick brown fox jumped over the lazy dog'),
 );
+
+// ==============================
+
+// Basic Algorithm Scripting: Return Largest Numbers in Arrays
+// Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
+// Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
+
+function largestOfFour(arr) {
+  const largestArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    largestArr.push(Math.max(...arr[i]));
+  }
+  console.log(largestArr);
+  return largestArr;
+}
+
+largestOfFour([
+  [4, 5, 1, 3],
+  [13, 27, 18, 26],
+  [32, 35, 37, 39],
+  [1000, 1001, 857, 1],
+]);
+
+// ==============================
+
+// Basic Algorithm Scripting: Confirm the Ending
+// Check if a string (first argument, str) ends with the given target string (second argument, target).
+// This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+
+function confirmEnding(str, target) {
+  let strToArr = str.split('').reverse();
+  let targetToArr = target.split('').reverse();
+  let amountOfMatchingChars = 0;
+
+  for (let i = 0; i < target.length; i++) {
+    if (strToArr[i] === targetToArr[i]) {
+      amountOfMatchingChars++;
+    }
+  }
+  if (amountOfMatchingChars === 0) return false;
+
+  return amountOfMatchingChars === target.length ? true : false;
+}
+
+console.log(confirmEnding('Bastian', 'an'));

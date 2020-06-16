@@ -1,3 +1,3 @@
 # freeCodeCamp-Basic_Algorithms
 
-# Includes my solutions
+Includes my solutions
