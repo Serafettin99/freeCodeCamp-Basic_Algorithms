@@ -99,3 +99,19 @@ function confirmEnding(str, target) {
 }
 
 console.log(confirmEnding('Bastian', 'an'));
+
+// ==============================
+
+// Basic Algorithm Scripting: Repeat a String Repeat a String
+// Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number.
+
+function repeatStringNumTimes(str, num) {
+  let finalStr = '';
+  for (let i = 0; i < num; i++) {
+    finalStr += str;
+  }
+  console.log(finalStr);
+  return finalStr;
+}
+
+repeatStringNumTimes('abc', 3);
