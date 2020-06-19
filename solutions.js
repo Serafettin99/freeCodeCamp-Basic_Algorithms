@@ -1,4 +1,4 @@
-// Reverse the provided string.
+// 1 - Reverse the provided string.
 // You may need to turn the string into an array before you can reverse it.
 // Your result must be a string.
 // reverseString("hello") should return a string.
@@ -13,7 +13,7 @@ reverseString('hello');
 
 // ==============================
 
-// Basic Algorithm Scripting: Factorialize a Number
+// 2 - Basic Algorithm Scripting: Factorialize a Number
 // Return the factorial of the provided integer.
 // If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
 // Factorials are often represented with the shorthand notation n!
@@ -38,7 +38,7 @@ console.log(factorialize(5));
 
 // ==============================
 
-// Basic Algorithm Scripting: Find the Longest Word in a String
+// 3 - Basic Algorithm Scripting: Find the Longest Word in a String
 // Return the length of the longest word in the provided sentence.
 // Your response should be a number.
 
@@ -57,7 +57,7 @@ console.log(
 
 // ==============================
 
-// Basic Algorithm Scripting: Return Largest Numbers in Arrays
+// 4 - Basic Algorithm Scripting: Return Largest Numbers in Arrays
 // Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
 // Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
 
@@ -79,7 +79,7 @@ largestOfFour([
 
 // ==============================
 
-// Basic Algorithm Scripting: Confirm the Ending
+// 5 - Basic Algorithm Scripting: Confirm the Ending
 // Check if a string (first argument, str) ends with the given target string (second argument, target).
 // This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
 
@@ -102,7 +102,7 @@ console.log(confirmEnding('Bastian', 'an'));
 
 // ==============================
 
-// Basic Algorithm Scripting: Repeat a String Repeat a String
+// 6 - Basic Algorithm Scripting: Repeat a String Repeat a String
 // Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number.
 
 function repeatStringNumTimes(str, num) {
@@ -118,7 +118,7 @@ repeatStringNumTimes('abc', 3);
 
 // ==============================
 
-// Basic Algorithm Scripting: Truncate a String
+// 7 - Basic Algorithm Scripting: Truncate a String
 // Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
 
 function truncateString(str, num) {
@@ -131,7 +131,7 @@ console.log(truncateString('A-tisket a-tasket A green and yellow basket', 8));
 
 // ==============================
 
-// Basic Algorithm Scripting: Finders Keepers
+// 8 - Basic Algorithm Scripting: Finders Keepers
 // Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument). If no element passes the test, return undefined.
 function findElement(arr, func) {
   return arr.find((num) => (func(num) ? num : undefined));
@@ -140,7 +140,7 @@ function findElement(arr, func) {
 findElement([1, 2, 3, 4], (num) => num % 2 === 0);
 
 // ==============================
-// Basic Algorithm Scripting: Boo who
+// 9 - Basic Algorithm Scripting: Boo who
 // Check if a value is classified as a boolean primitive. Return true or false.
 
 // Boolean primitives are true and false.
@@ -150,3 +150,24 @@ function booWho(bool) {
 }
 
 booWho(null);
+
+// ==============================
+
+// 10 - Basic Algorithm Scripting: Title Case a Sentence
+// Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+// For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
+
+function titleCase(str) {
+  const strToArr = str.toLowerCase().split(' ');
+  const newStr = strToArr
+    .map((elm) => elm[0].toUpperCase() + elm.slice(1))
+    .join(' ');
+
+  return newStr;
+}
+
+titleCase("I'm a little tea pot");
+
+// ==============================
+
+// 11 -
