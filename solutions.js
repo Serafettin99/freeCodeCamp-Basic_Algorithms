@@ -124,13 +124,9 @@ repeatStringNumTimes('abc', 3);
 function truncateString(str, num) {
   if (num >= str.length) return str;
 
-  const strToArr = str.split('');
-  const truncatedArr = strToArr.slice(0, num);
-  const truncatedStr = truncatedArr.join('');
-  console.log(truncatedStr);
-  return truncatedStr + '...';
+  return str.slice(0, num) + '...';
 }
 
-truncateString('A-tisket a-tasket A green and yellow basket', 8);
+console.log(truncateString('A-tisket a-tasket A green and yellow basket', 8));
 
 // ==============================
