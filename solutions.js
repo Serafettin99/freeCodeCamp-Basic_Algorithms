@@ -181,3 +181,15 @@ function frankenSplice(arr1, arr2, n) {
   return [...arr2.slice(0, n), ...arr1, ...newArr2.splice(n)];
 }
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+// ==============================
+// 12 - Basic Algorithm Scripting: Falsy Bouncer
+// Remove all falsy values from an array.
+// Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+// Hint: Try converting each value to a Boolean.
+
+function bouncer(arr) {
+  const filteredArr = arr.filter((elem) => !!elem !== false);
+  return filteredArr;
+}
+bouncer([7, 'ate', '', false, 9]);
